@@ -1,0 +1,199 @@
+{% extends 'base/base.html' %}
+{% block container %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+	<!-- Page info -->
+	<div class="page-top-info">
+		<div class="container">
+			<h4>TU CARRITO</h4>
+			<div class="site-pagination">
+				<a href="">Inicio</a> /
+				<a href="">Tu carrito</a>
+			</div>
+		</div>
+	</div>
+	<!-- Page info end -->
+
+
+	<!-- cart section end -->
+	<section class="cart-section spad">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="cart-table">
+						<h3>Su carrito</h3>
+						<div class="cart-table-warp">
+							<table>
+							<thead>
+								<tr>
+									<th class="product-th">Producto</th>
+									<th class="quy-th">Cantidad</th>
+									<th class="total-th">Precio</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="product-col">
+										<img src="../static/img/product/2.jpg" width="300" height="110" alt="">
+										<div class="pc-title">
+											<h4>The sims 4</h4>
+											<p>$36.90</p>
+										</div>
+									</td>
+									<td class="quy-col">
+										<div class="quantity">
+					                        <div class="pro-qty">
+												<input type="text" value="1">
+											</div>
+                    					</div>
+									</td>
+									
+									<td class="total-col"><h4>$45.90</h4></td>
+								</tr>
+								<tr>
+									<td class="product-col">
+										<img src="../static/img/product/5.jpg" width="300" height="110" alt="">
+										<div class="pc-title">
+											<h4>The legend of zelda breath of the wild</h4>
+											<p>$34.90</p>
+										</div>
+									</td>
+									<td class="quy-col">
+										<div class="quantity">
+					                        <div class="pro-qty">
+												<input type="text" value="1">
+											</div>
+                    					</div>
+									</td>
+									
+									<td class="total-col"><h4>$45.90</h4></td>
+								</tr>
+								<tr>
+									<td class="product-col">
+										<img src="../static/img/product/12.jpg" width="300" height="110" alt="">
+										<div class="pc-title">
+											<h4>The Last of Us Part II</h4>
+											<p>$60.00</p>
+										</div>
+									</td>
+									<td class="quy-col">
+										<div class="quantity">
+					                        <div class="pro-qty">
+												<input type="text" value="1">
+											</div>
+                    					</div>
+									</td>
+								
+									<td class="total-col"><h4>$45.90</h4></td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+						<div class="total-cost">
+							<h6>Total <span>$99.90</span></h6>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 card-right">
+					<form class="promo-code-form">
+						<input type="text" placeholder="código promocional">
+						<button>Enviar</button>
+					</form>
+					<a href="{% url 'checkout' %}" class="site-btn">PASAR POR LA CAJA</a>
+					<a href="{% url 'index' %}" class="site-btn sb-dark">SEGUIR COMPRANDO</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- cart section end -->
+
+	<!-- Related product section -->
+	<section class="related-product-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h2>SEGUIR COMPRANDO</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<div class="tag-new">New</div>
+							<img src="../static/img/product/6.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>BOOM ETERNAL</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="../static/img/product/7.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p> Danganrompa </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="../static/img/product/4.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$20,00</h6>
+							<p>UNDERTALE</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="../static/img/product/11.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$40,00</h6>
+						    <p>OVERWATCH</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Related product section end -->
+
+
+
+			</div>
+		</div>
+	</section>
+	<!-- Related product section end -->
+
+
+
+	<!-- Footer section -->
+	
+	</body>
+</html>
+{% endblock %}

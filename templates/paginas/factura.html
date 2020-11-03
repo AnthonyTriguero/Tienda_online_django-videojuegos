@@ -1,0 +1,366 @@
+{% extends 'base/base.html' %}
+{% block container %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+
+
+
+	<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+<body>
+
+
+	<!-- Page info -->
+	
+
+
+	<!-- Contact section -->
+	<section class="contact-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 contact-info">
+					<h3>Factura</h3>
+				
+	</section>
+	<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Guia Salgraf</title>
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap_prince.css' %}">
+    <script src="js/bootstrap_prince.js"></script>
+    <style>
+      @import url(http://fonts.googleapis.com/css?family=Bree+Serif);
+      body, h1, h2, h3, h4, h5, h6{
+      font-family: 'Bree Serif', serif;
+      }
+      span, h4, .letra {
+          font-family: "Times New Roman";
+          font-size: 10px;
+      }
+      .titulo {
+          font-family: "Arial Narrow", Arial, sans-serif;
+          font-size: 12px;
+          white-space: pre;
+      }
+      .titulopie {
+          font-family: Tahoma, Verdana, Segoe, sans-serif;
+          font-size: 12px;
+          white-space: pre;
+      }
+      .row > .sinespacio {
+          display: inline-block;
+          margin: 0;
+          float: left;
+          white-space: nowrap;
+      }
+      .row > .limpiar {
+          clear: both;
+      }
+      table {
+          border: 0px;
+          border-spacing: 0px;
+          border-collapse: collapse;
+      }
+      td, th {
+          padding: 0px;
+          border: 0px;
+          margin: 0px;
+      }
+      .izq {
+          text-align: right;
+      }
+      .borde {
+          border-style: solid;
+          border-width: 1px;
+          border-color: black;
+          padding-bottom: 3px;
+      }
+
+      @page { size:8.5in 11in; margin: 1cm }
+    </style>
+  </head>
+  
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-4"><img style="width:48%" src="../static/img/logo-light.png" ></div>
+          <div class="col-xs-4"><img src="../static/images/direccion.png"></div>
+          <div class="col-xs-4"><img src="../static/images/factura.png"></div>
+      </div>
+        <hr>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="titulo">Nro. Factura:       </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="numerofactura"></div>
+            </div>
+            <div class="col-xs-2">
+                <div class="titulo">Autorizacion:       </div>
+            </div>
+            <div class="col-xs-5">
+                <div id="numeroauto"></div>
+            </div>
+        </div>   
+        <div class="row">
+            <div class="col-xs-2">
+                <div class="titulo">Fecha Emision: </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="fechaemision"></div>
+            </div>
+            <div class="col-xs-2">
+                <div class="titulo">RUC Cliente:   </div>
+            </div>
+            <div class="col-xs-5">
+                <div id="rucCliente"></div>
+            </div>
+        </div>  
+       
+        <div class="row">
+            <div class="col-xs-2">
+                <div class="titulo">Telefono:      </div>
+            </div>
+            <div class="col-xs-2">
+                <div id="telefono"></div>
+            </div>            
+            <div class="col-xs-2">
+                <div class="titulo">Direccion:     </div>
+            </div>
+            <div class="col-xs-5">
+                <div id="direccion"></div>
+            </div>
+        </div>          
+        <div class="row">
+            <div class="col-xs-2">
+                <div class="titulo">Nombres/Razon: </div>
+            </div>
+            <div class="col-xs-6">
+                <div id="razon"></div>
+            </div>
+        </div>    
+        
+    
+	  
+	  <table class="table table-bordered  ">
+        <thead>
+          <tr>
+              <th><h4 class="titulo">&nbsp;&nbsp;&nbsp;Producto&nbsp;&nbsp;&nbsp;</h4></th>
+        <th><h4 class="titulo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Descripcion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4></th>
+        <th><h4 class="titulo">&nbsp;&nbsp;&nbsp;Cant.&nbsp;&nbsp;&nbsp;</h4></th>
+        <th><h4 class="titulo">&nbsp;&nbsp;&nbsp;&nbsp;P.Unit.&nbsp;&nbsp;&nbsp;&nbsp;</h4></th>
+        <th><h4 class="titulo">&nbsp;&nbsp;&nbsp;&nbsp;Dscto.&nbsp;&nbsp;&nbsp;&nbsp;</h4></th>
+        <th><h4 class="titulo">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Subtotal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h4></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td class="codigo"></td>
+              <td class="descripcion"></td>
+              <td class="cantidad izq"></td>
+              <td class="precio izq"></td>
+              <td class="descuento izq"></td>
+              <td class="subtotal izq"></td>
+          </tr>
+		</tbody>
+		<tr>
+			<td alt="" width="100" height="100"><img src="../static/img/product/2.jpg" alt="" width="100" height="100"></td>
+			<br><br>
+			<td > <h6 align="center"> Juego de simulacion de vida</h6> </td>
+			<td > <h6 align="center"> 1</h6> </td>
+			<td > <h6 align="center"> 36</h6> </td>
+			<td > <h6 align="center"> 0%</h6> </td>
+			<td > <h6 align="center"> 35$</h6> </td>
+			
+		</tr>
+	  </table>
+	  
+	  
+	  
+        <div class="row sinespacio">
+             <div class="col-xs-3">
+                <div><img src="../static/images/blanco.png"></div>
+            </div>
+            <div class="col-xs-3">
+                <div id="blanco1"></div>
+            </div>
+            <div class="col-xs-3">
+                <div>Total Sin Impto: 36  </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="izq borde" id="totalSinImpto"></div>
+            </div>          
+        </div>
+        <div class="row sinespacio">
+             <div class="col-xs-3">
+                <div><img src="../static/images/blanco.png"></div>
+            </div>
+            <div class="col-xs-3">
+                <div id="blanco2"></div>
+            </div>
+            <div class="col-xs-3">
+                <div>Impuesto 12%:       </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="izq borde" id="valorImpto12"></div>
+            </div>          
+        </div>    
+<!--        <div class="row sinespacio">
+             <div class="col-xs-3">
+                <div><img src="images/blanco.png"></div>
+            </div>
+            <div class="col-xs-3">
+                <div id="blanco3"></div>
+            </div>
+            <div class="col-xs-3">
+                <div>Impuesto 0%:        </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="izq borde" id="valorImpto0"></div>
+            </div>          
+        </div>  -->
+        <div class="row sinespacio">
+             <div class="col-xs-3">
+                <div><img src="../static/images/blanco.png"></div>
+            </div>
+            <div class="col-xs-3">
+                <div id="blanco4"></div>
+            </div>
+            <div class="col-xs-3">
+                <div>Valor a Pagar:  36$    </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="izq borde" id="apagar"></div>
+            </div>          
+        </div>
+        <div class="row limpiar"></div>
+        <div class="row">
+            <div class="col-xs-4">
+       
+            </div>
+            
+            <div class="col-xs-2">
+               
+            </div>
+            <div class="col-xs-1"><img src="../static/images/blanco.png"></div>
+            <div class="col-xs-2">
+             
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-8 titulopie">
+              
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-5 titulopie">
+                NARNIA, ______ DE ____________ DEL ______</div>
+            <div class="col-xs-1"><img src="../static/images/blanco.png"></div>
+            <div class="col-xs-2">
+                <img src="../static/images/cliente.png">
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+
+	<!-- Contact section end -->
+
+
+	<!-- Related product section -->
+	<section class="related-product-section spad">
+		<div class="container">
+			<div class="section-title">
+				<h2>Tus favoritos</h2>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<div class="tag-new">New</div>
+							<img src="../static/img/product/2.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p>THE SIMS 4</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="../static/img/product/5.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$35,00</h6>
+							<p> ZELDA BREATH OF THE WILD </p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="../static/img/product/9.jpg" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$FREE</h6>
+							<p>HELLTAKER</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-sm-6">
+					<div class="product-item">
+						<div class="pi-pic">
+							<img src="../static/img/product/1.png" width="300" height="425">
+							<div class="pi-links">
+								<a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+								<a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+							</div>
+						</div>
+						<div class="pi-text">
+							<h6>$60,00</h6>
+						    <p>FARCRY 6</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- Related product section end -->
+
+
+
+			</div>
+		</div>
+	</section>
+	<!-- Footer section end -->
+
+
+
+	<!--====== Javascripts & Jquery ======-->
+	
+
+	</body>
+</html>
+{% endblock %}

@@ -1,4 +1,4 @@
-# Tienda_online_django
+# Tienda_online_django- Videojuegos
 Diseños en Django - VideoJuegos
 # Tienda.md
 

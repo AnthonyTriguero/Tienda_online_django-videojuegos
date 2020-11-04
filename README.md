@@ -1,10 +1,12 @@
 # Tienda_online_django
-Diseños
+Diseños en Django
 # Tienda.md
 
 ![](https://github.com/AnthonyTriguero/Tienda_online_django/raw/master/static/images/tienda155.jpg)
 
 ![](https://github.com/AnthonyTriguero/Tienda_online_django/raw/master/static/images/tienda1554.jpg)
+
+![](https://github.com/AnthonyTriguero/Tienda_online_django/raw/master/static/images/tienda1556.jpg)
 
 
 
